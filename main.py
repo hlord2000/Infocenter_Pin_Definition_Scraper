@@ -71,7 +71,7 @@ for link in links:
                 for row in table_body.find_all("tr"):
                     for cell in row.find_all("td"):
                         # Remove all line breaks and commas
-                        cell_text = cell.text.strip().replace("\n", "").replace(",", "")
+                        cell_text = cell.text.strip().replace("\n", "/").replace(",", "")
                         f.write(cell_text + ",")
                     f.write("\n")
         except IndexError:
