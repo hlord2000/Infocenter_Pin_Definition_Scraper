@@ -1,0 +1,1 @@
+# Python script to gather pin descriptions from Nordic Infocenter tables.
