@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="(C) Copyright 2022" name="copyright" />
+<meta content="(C) Copyright 2022" name="DC.rights.owner" />
+<meta content="concept" name="DC.Type" />
+<meta content="Pin assignments" name="DC.Title" />
+<meta content="This section describes the pin assignment and the pin functions." name="abstract" />
+<meta content="This section describes the pin assignment and the pin functions." name="description" />
+<meta content="../keyfeatures_html5.html" name="DC.Relation" scheme="URI" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="pin_assign" name="DC.Identifier" />
+<link href="commonltr.css" rel="stylesheet" type="text/css" />
+<title>Pin assignments</title>
+<link href="../../PRODUCT_PLUGIN/nordic.css" rel="stylesheet" type="text/css" />
+<link href="https://infocenter.nordicsemi.com/css/infocenter_css.php" rel="stylesheet" type="text/css" />
+<script src="../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+<link charset="ISO-8859-1" href="../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css" />
+<script src="../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../index.jsp?topic=%2Fps_nrf5340%2Fchapters%2Fpin.html\u0026cp=4_0_0_8_0" + anchorParam);
+}
+</script>
+</head>
+<body>
+<div class="help_breadcrumbs"><a href="../../../topic/struct_nrf53/struct/nrf53.html" shape="rect">nRF53 Series</a> &gt; <a href="../../../topic/struct_nrf53/struct/nrf5340.html" shape="rect">nRF5340</a> &gt; <a href="../../../topic/ps_nrf5340/keyfeatures_html5.html" shape="rect">nRF5340 Product Specification</a> &gt; <a href="../../../nav/4_0_0_8" shape="rect">Hardware and layout</a></div>
+<script type="text/javascript" xml:space="preserve">
+<!-- Google Analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72983410-1', 'auto');
+  ga('send', 'pageview');
+<!-- end Google Analytics -->
+<!-- Start of Async HubSpot Analytics Code -->
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/1961165.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+<!-- End of Async HubSpot Analytics Code -->
+</script><div aria-labelledby="ariaid-title1" class="nested0" id="pin_assign">
+<h1 class="title topictitle1" id="ariaid-title1">Pin assignments</h1>
+<div class="body conbody"><p class="shortdesc">This section describes the pin assignment and the pin functions.</p>
+<p class="p">This device provides flexibility when it comes to routing and configuration of the GPIO pins.
+However, some pins have recommendations for how the pin should be configured or what it should be
+used for.</p>
+<p class="p">In addition to the information in the pinout tables for the respective packages, the
+following peripherals have dedicated pins that should be used for proper operation:</p>
+<ul class="ul">
+<li class="li">TWI - For the fastest TWI 1 Mbps mode, the two high-speed TWI pins must be configured in
+the TWI peripheral's PSEL registers, and the 20 mA open drain driver enabled using the E0E1
+drive setting in the DRIVE field of the PIN_CNF GPIO register.</li>
+<li class="li">QSPI - For QSPI only the dedicated GPIO pins from the following table shall be used. These must be enabled using the
+Peripheral option of the PIN_CNF[p].MCUSEL register. The GPIO must use the high drive H0H1
+configuration in the DRIVE field of the PIN_CNF GPIO register.</li>
+<li class="li">SPIM4 - For the 32 Mbps SPI mode, the special purpose GPIO pins are enabled using the Peripheral option of the PIN_CNF[p].MCUSEL register. When activated, the SPIM PSEL settings are ignored, and the dedicated pins are used. The GPIO must use the high drive H0H1 configuration in the DRIVE field of the PIN_CNF GPIO register.</li>
+<li class="li">TRACE - When using trace, the TRACEDATA[n] and TRACECLK GPIO pins must all use the extra
+high drive E0E1 configuration in the DRIVE field of the PIN_CNF GPIO register. Also, the TND
+option of the PIN_CNF[p].MCUSEL register must be used.</li>
+</ul>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="pin_assign__table_o2n_yqc_mkb" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Special GPIO considerations</span></caption><colgroup span="1"><col span="1" style="width:21.50537634408602%" /><col span="1" style="width:78.49462365591397%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d1244316e62" rowspan="1" style="vertical-align:top;">GPIO pin</th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e65" rowspan="1" style="vertical-align:top;">Description</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e62" rowspan="1" style="vertical-align:top;">P0.08 - P0.12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e65" rowspan="1" style="vertical-align:top;">Drive configuration E0E1 is available and must be used for TRACE. For 32 Mbps
+high-speed SPI using SPIM4, drive configuration H0H1 must be used. </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e62" rowspan="1" style="vertical-align:top;">P0.13 - P0.18</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e65" rowspan="1" style="vertical-align:top;">The H0H1 drive configuration features the highest speeds of quad SPI using the
+direct connection of the QSPI peripheral. </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e62" rowspan="1" style="vertical-align:top;">P1.02 and P1.03</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e65" rowspan="1" style="vertical-align:top;">The E0E1 drive configuration activates a 20 mA open-drain driver specifically
+designed for high-speed TWI. </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e62" rowspan="1" style="vertical-align:top;">Remaining pins</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e65" rowspan="1" style="vertical-align:top;">The E0E1 drive configuration is not supported. Using the E0E1 drive
+configuration will cause incorrect operation. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note note"><span class="notetitle">Note:</span> The extra high drive E0E1 drive configuration has limited availability. It
+is only available for the dedicated TRACE pins on P0.08 through P0.12. For
+the dedicated, high-speed TWIM pins on P1.02 and P1.03, the E0E1 drive configuration activates a
+powerful 20 mA <em class="ph i">open-drain</em> driver specifically designed for high-speed TWI.</div>
+<p class="p">For all high-speed signals, the printed circuit board (PCB) layout must ensure that connections
+are made using short PCB traces. Refer to the manufacturer's PCB design recommendations for
+additional information.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../keyfeatures_html5.html" shape="rect" title="This Product Specification contains functional descriptions, register tables, and electrical specifications, and is organized into chapters based on the modules and peripherals that are available in this IC.">nRF5340 Product Specification</a></div>
+</div>
+</div><div aria-labelledby="ariaid-title2" class="topic reference nested1" id="aqfn94">
+<h2 class="title topictitle2" id="ariaid-title2">aQFN94 pin assignments</h2>
+<div class="body refbody"><p class="shortdesc">The aQFN94 package has 94 pins in addition to four corner pads and a die pad.</p>
+<div class="section">
+<div class="fig fignone" id="aqfn94__fig_aqfn94_pins"><span class="figcap"><span class="fig--title-label">Figure 1. </span>aQFN™ pin assignments, top view. Corner and die pad is not illustrated.</span>
+<br clear="none" /><div class="imagecenter"><img class="image imagecenter" id="aqfn94__image_5340_aqfn94" src="hw_layout/pin/doc/image/pinout_5340_aqfn94.svg" /></div><br clear="none" />
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="aqfn94__table_aqfn94_pins" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>aQFN™ pin assignments</span></caption><colgroup span="1"><col span="1" style="width:8.333333333333332%" /><col span="1" style="width:16.666666666666664%" /><col span="1" style="width:16.666666666666664%" /><col span="1" style="width:41.66666666666667%" /><col span="1" style="width:16.666666666666664%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d1244316e190" rowspan="1" style="vertical-align:top;"><strong class="ph b">Pin</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e194" rowspan="1" style="vertical-align:top;"><strong class="ph b">Name</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e198" rowspan="1" style="vertical-align:top;"><strong class="ph b">Function</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e202" rowspan="1" style="vertical-align:top;"><strong class="ph b">Description</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e206" rowspan="1" style="vertical-align:top;">Recommended usage</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VBUS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">5 V input for USB 3.3 V regulator</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A13</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECA</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Analog regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A15</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Digital regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A17</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.13</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+ <td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A19</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A21</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DCC</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A23</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECN</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A25</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A27</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECR</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">D+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">USB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">USB D+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">D-</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">USB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">USB D-</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECUSB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">USB 3.3 V regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DCCD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B14</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.15</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B16</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.14</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B18</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B20</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B22</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B24</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.30</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B26</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B28</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">B30</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">XC2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Connection for 32 MHz crystal</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">C1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">C31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">XC1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Connection for 32 MHz crystal</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">D2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">E1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDDH</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">E31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">F2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">G1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">G31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DECRF</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">RADIO power supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">H2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">J1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">DCCH</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">J31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">K2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">L1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">L31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">ANT</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Single-ended antenna connection</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">M2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.00</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">N1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.00<br clear="none" />
+XL1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Connection for 32 kHz crystal</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">N31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">P2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.01</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">R1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.01<br clear="none" />
+XL2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Connection for 32 kHz crystal</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">R31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">T2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">U1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">U31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.29</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">V2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.04<br clear="none" />
+AIN0</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">W1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.02<br clear="none" />
+NFC1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+NFC input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+NFC antenna connection</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">W31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">SWDCLK</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Debug</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Serial wire debug clock input for debug and programming</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">Y2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.05<br clear="none" />
+AIN1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AA1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.03<br clear="none" />
+NFC2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+NFC input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+NFC antenna connection</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AA31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">SWDIO</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Debug</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Serial wire debug I/O for debug and programming</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AB2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.06<br clear="none" />
+AIN2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AC1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AC31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">nRESET</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Reset</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Pin RESET with internal pull-up resistor</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AD2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.07<br clear="none" />
+AIN3</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AE1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P1.02<br clear="none" />
+TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+TWI 1 Mbps</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+High-speed pin for 1 Mbps TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">TWI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AE31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.28<br clear="none" />
+AIN7</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AF2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P1.03<br clear="none" />
+TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+TWI 1 Mbps</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+High-speed pin for 1 Mbps TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">TWI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AG1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AG31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AH2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.08<br clear="none" />
+TRACEDATA3<br clear="none" />
+SCK</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+SCK for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[3]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AJ1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.09<br clear="none" />
+TRACEDATA2<br clear="none" />
+MOSI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+MOSI for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[2]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AJ31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.10<br clear="none" />
+TRACEDATA1<br clear="none" />
+MISO</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+MISO for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[1]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.11<br clear="none" />
+TRACEDATA0<br clear="none" />
+CSN</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+CSN for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[0]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.12<br clear="none" />
+TRACECLK<br clear="none" />
+DCX</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Trace clock<br clear="none" />
+DCX for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Trace buffer clock<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.14<br clear="none" />
+IO1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+IO1 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.15<br clear="none" />
+IO2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+IO2 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+ </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.17<br clear="none" />
+SCK</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+SCK for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK14</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.18<br clear="none" />
+CSN</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+CSN for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK16</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.20</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK18</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.22</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK20</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.23</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK22</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.05</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK24</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.07</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK26</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.09</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK28</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.25<br clear="none" />
+AIN4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AK30</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.27<br clear="none" />
+AIN6</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.13<br clear="none" />
+IO0</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+IO0 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.16<br clear="none" />
+IO3</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+IO3 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL13</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.19</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL15</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.21</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL17</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL19</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.04</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL21</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.06</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL23</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P1.08</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL25</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL27</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">P0.24</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL29</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">
+<p class="lines">P0.26<br clear="none" />
+AIN5</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">
+<p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">
+<p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="4" headers="d1244316e190 d1244316e194 d1244316e198 d1244316e202" rowspan="1" style="vertical-align:top;"><strong class="ph b">Corner pads</strong></td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">A31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">AL31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="4" headers="d1244316e190 d1244316e194 d1244316e198 d1244316e202" rowspan="1" style="vertical-align:top;"><strong class="ph b">Bottom of chip</strong></td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e190" rowspan="1" style="vertical-align:top;">Die pad</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e194" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e198" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e202" rowspan="1" style="vertical-align:top;">Ground pad. Exposed die pad must be connected to ground (VSS) for proper device
+operation.</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e206" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title3" class="topic reference nested1" id="wlcsp">
+<h2 class="title topictitle2" id="ariaid-title3">WLCSP pin assignments</h2>
+<div class="body refbody"><p class="shortdesc"><!-- --></p>
+<div class="section">
+<div class="fig fignone" id="wlcsp__fig_wlcsp_pins"><span class="figcap"><span class="fig--title-label">Figure 2. </span>WLCSP pin assignments, top view</span>
+<br clear="none" /><div class="imagecenter"><img class="image imagecenter" id="wlcsp__image_5340_wlcsp" src="hw_layout/pin/doc/image/pinout_5340_wlcsp.svg" /></div><br clear="none" />
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="wlcsp__table_wlcsp_pins" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>WLCSP pin assignments</span></caption><colgroup span="1"><col span="1" style="width:8.333333333333332%" /><col span="1" style="width:16.666666666666664%" /><col span="1" style="width:16.666666666666664%" /><col span="1" style="width:41.66666666666667%" /><col span="1" style="width:16.666666666666664%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d1244316e2195" rowspan="1" style="vertical-align:top;"><strong class="ph b">Pin</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e2199" rowspan="1" style="vertical-align:top;"><strong class="ph b">Name</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e2203" rowspan="1" style="vertical-align:top;"><strong class="ph b">Function</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e2207" rowspan="1" style="vertical-align:top;"><strong class="ph b">Description</strong></th>
+<th class="entry cellrowborder" colspan="1" id="d1244316e2211" rowspan="1" style="vertical-align:top;"><strong class="ph b">Recommended usage</strong></th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">XC1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Connection for 32 MHz crystal</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">XC2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Connection for 32 MHz crystal</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DCCD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">D-</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">USB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">USB D-</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">A12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">D+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">USB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">USB D+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECRF</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">RADIO power supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECR</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECN</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DCC</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECA</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VBUS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">B12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDDH</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.30</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.31</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.13</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.14</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.15</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">C11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DECUSB</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">USB 3.3 V regulator supply decoupling</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">D1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">ANT</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Single-ended antenna connection</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">D2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">D10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.00</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">D11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">DCCH</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">DC/DC converter output</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">D12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.29</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.28<br clear="none" />
+AIN7</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.01</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">E11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">SWDIO</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Debug</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Serial wire debug I/O for debug and programming</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">SWDCLK</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Debug</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Serial wire debug clock input for debug and programming</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.08</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.05<br clear="none" />
+AIN1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.00<br clear="none" />
+XL1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Connection for 32 kHz crystal</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">F12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.01<br clear="none" />
+XL2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Connection for 32 kHz crystal</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G2</td>
+ <td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">nRESET</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Reset</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Pin RESET with internal pull-up resistor</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.07</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">AVSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.04<br clear="none" />
+AIN0</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">G11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.02<br clear="none" />
+NFC1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+NFC input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+NFC antenna connection</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.27<br clear="none" />
+AIN6</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.09</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.23</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.06<br clear="none" />
+AIN2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">H12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.03<br clear="none" />
+NFC2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+NFC input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+NFC antenna connection</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.26<br clear="none" />
+AIN5</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.06</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.21</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.19</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.12<br clear="none" />
+TRACECLK<br clear="none" />
+DCX</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Trace clock<br clear="none" />
+DCX for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Trace buffer clock<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.11<br clear="none" />
+TRACEDATA0<br clear="none" />
+CSN</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+CSN for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[0]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.10<br clear="none" />
+TRACEDATA1<br clear="none" />
+MISO</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+MISO for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[1]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.09<br clear="none" />
+TRACEDATA2<br clear="none" />
+MOSI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+MOSI for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[2]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.07<br clear="none" />
+AIN3</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">J11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P1.02<br clear="none" />
+TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+TWI 1 Mbps</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+High-speed pin for 1 Mbps TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">TWI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K2</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.24</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.04</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K4</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.22</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P0.20</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K6</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">AVSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.18<br clear="none" />
+CSN</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+CSN for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K8</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.16<br clear="none" />
+IO3</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+IO3 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.14<br clear="none" />
+IO1</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+IO1 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K10</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.13<br clear="none" />
+IO0</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+IO0 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">AVSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Ground</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">K12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P1.03<br clear="none" />
+TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+TWI 1 Mbps</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+High-speed pin for 1 Mbps TWI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">TWI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L1</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.25<br clear="none" />
+AIN4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Analog input</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L3</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">P1.05</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">General purpose I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L5</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L7</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.17<br clear="none" />
+SCK</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+SCK for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L9</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.15<br clear="none" />
+IO2</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+IO2 for QSPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Dedicated pin for Quad SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">QSPI</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L11</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;">VDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;">Power supply</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2195" rowspan="1" style="vertical-align:top;">L12</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2199" rowspan="1" style="vertical-align:top;"><p class="lines">P0.08<br clear="none" />
+TRACEDATA3<br clear="none" />
+SCK</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2203" rowspan="1" style="vertical-align:top;"><p class="lines">Digital I/O<br clear="none" />
+Trace data<br clear="none" />
+SCK for SPIM4</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2207" rowspan="1" style="vertical-align:top;"><p class="lines">General purpose I/O<br clear="none" />
+Trace buffer TRACEDATA[3]<br clear="none" />
+Dedicated pin for high-speed SPI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d1244316e2211" rowspan="1" style="vertical-align:top;">Trace, SPIM4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="topicfooter"><span>
+<hr />
+This document was last updated on </span>2022-10-11<span>.<br clear="none" />
+Please send us your <a href="/cdn-cgi/l/email-protection#d9bdb6babfbcbcbdbbb8bab299b7b6abbdb0baaabcb4b0f7b7b6e6aaacbbb3bcbaade49db6baacb4bcb7adb8adb0b6b7fcebe9bfbcbcbdbbb8bab2" shape="rect">feedback</a> about the documentation! For technical questions, visit the <a href="https://devzone.nordicsemi.com/questions/" shape="rect" target="_blank">Nordic Developer Zone</a>.
+</span></div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'7d42b05c4d9a1386',m:'EOK9YnzwwQOJ1XyybtSFlghfq5lCYMrsSAx0crm_yfg-1686243604-0-AZ1gr82D/PulJ6hJhzJCKs1W/RmsCoq6d7vBx8lTq8ls'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

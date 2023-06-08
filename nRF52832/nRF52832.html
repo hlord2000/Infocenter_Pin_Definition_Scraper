@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="(C) Copyright 2005" name="copyright" />
+<meta content="(C) Copyright 2005" name="DC.rights.owner" />
+<meta content="concept" name="DC.Type" />
+<meta content="Pin assignments" name="DC.Title" />
+<meta content="Here we cover the pin assignments for each variant of the chip." name="abstract" />
+<meta content="Here we cover the pin assignments for each variant of the chip." name="description" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="pin_assign" name="DC.Identifier" />
+<link href="./commonltr.css" rel="stylesheet" type="text/css" />
+<title>Pin assignments</title>
+<link href="../PRODUCT_PLUGIN/nordic.css" rel="stylesheet" type="text/css" />
+<link href="https://infocenter.nordicsemi.com/css/infocenter_css.php" rel="stylesheet" type="text/css" />
+<script src="../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+<link charset="ISO-8859-1" href="../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css" />
+<script src="../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../index.jsp?topic=%2Fcom.nordic.infocenter.nrf52832.ps.v1.1%2Fpin.html\u0026cp=5_2_0_3" + anchorParam);
+}
+</script>
+</head>
+<body>
+<div class="help_breadcrumbs"><a href="../../topic/struct_nrf52/struct/nrf52.html" shape="rect">nRF52 Series</a> &gt; <a href="../../topic/struct_nrf52/struct/nrf52832.html" shape="rect">nRF52832</a> &gt; <a href="../../topic/struct_nrf52/struct/nrf52832_ps.html" shape="rect">nRF52832 Product Specification</a></div>
+<script type="text/javascript" xml:space="preserve">
+<!-- Google Analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72983410-1', 'auto');
+  ga('send', 'pageview');
+<!-- end Google Analytics -->
+<!-- Start of Async HubSpot Analytics Code -->
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/1961165.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+<!-- End of Async HubSpot Analytics Code -->
+</script>
+<div class="nested0" id="pin_assign">
+<h1 class="title topictitle1">Pin assignments</h1>
+<p class="shortdesc">Here we cover the pin assignments for each variant of the chip.</p>
+<div class="topic reference nested1" id="qfn48">
+<h2 class="title topictitle2">QFN48 pin assignments</h2>
+<div class="body refbody"><p class="shortdesc"><!-- --></p>
+<div class="section">
+<div class="fig fignone" id="qfn48__fig_zpd_p5k_jq"><span class="figcap">Figure 1. QFN48 pin assignments, top view</span>
+<br clear="none" /><div class="imagecenter"><embed class="image imagecenter" height="480" src="chapters/pin/doc/image/pinout_52832_QFN48.svg" /></div><br clear="none" />
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple" frame="border" id="qfn48__table_wxv_zlr_2q" rules="all" summary=""><caption><span class="tablecap">Table 1. QFN48 pin assignments</span></caption>
+<thead align="left" class="thead">
+<tr class="row">
+<th class="entry" colspan="1" id="d14800159e72" rowspan="1" valign="top"><strong class="ph b">Pin</strong></th>
+<th class="entry" colspan="1" id="d14800159e76" rowspan="1" valign="top"><strong class="ph b">Name</strong></th>
+<th class="entry" colspan="1" id="d14800159e80" rowspan="1" valign="top"><strong class="ph b">Type</strong></th>
+<th class="entry" colspan="1" id="d14800159e84" rowspan="1" valign="top"><strong class="ph b">Description</strong></th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="4" headers="d14800159e72 d14800159e76 d14800159e80 d14800159e84" rowspan="1" valign="top"><strong class="ph b">Left Side of chip</strong></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">1</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">DEC1</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">0.9 V regulator digital supply decoupling</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">2</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.00</p>
+<p class="p">XL1</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O </p>
+<p class="p">Connection for 32.768 kHz crystal (LFXO)</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">3</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.01</p>
+<p class="p">XL2</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Connection for 32.768 kHz crystal (LFXO)</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">4</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.02</p>
+<p class="p">AIN0</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">5</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.03</p>
+<p class="p">AIN1</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">6</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.04</p>
+<p class="p">AIN2</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">7</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.05</p>
+<p class="p">AIN3</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">8</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.06</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">9</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.07</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">10</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.08</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">
+<p class="p">11</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">NFC1</p>
+<p class="p">P0.09</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">NFC input</p>
+<p class="p">Digital I/O</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">NFC antenna connection</p>
+<p class="p">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn" shape="rect"><sup>.</sup></a></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">
+<p class="p">12</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">NFC2</p>
+<p class="p">P0.10</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">NFC input</p>
+<p class="p">Digital I/O</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">NFC antenna connection</p>
+<p class="p">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn" shape="rect"><sup>.</sup></a></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="4" headers="d14800159e72 d14800159e76 d14800159e80 d14800159e84" rowspan="1" valign="top"><strong class="ph b"> Bottom side of chip</strong></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">13</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VDD</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Power supply</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">14</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.11</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">15</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.12</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">16</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.13</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">17</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.14</p>
+<p class="p">TRACEDATA[3]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">18</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.15</p>
+<p class="p">TRACEDATA[2]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">19</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.16</p>
+<p class="p">TRACEDATA[1]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">20</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.17</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">21</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.18</p>
+<p class="p">TRACEDATA[0] / SWO</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Single wire output</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">22</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.19</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">23</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.20</p>
+<p class="p">TRACECLK</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port clock output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">24</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+ <p class="p">P0.21</p>
+<p class="p">nRESET</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Configurable as pin reset</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="4" headers="d14800159e72 d14800159e76 d14800159e80 d14800159e84" rowspan="1" valign="top"><strong class="ph b">Right Side of chip</strong></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">25</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">SWDCLK</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital input</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Serial wire debug clock input for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">26</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">SWDIO</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Serial wire debug I/O for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">27</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.22</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">28</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.23</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">29</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.24</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">30</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">ANT</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">RF</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Single-ended radio antenna connection</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">31</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Ground (Radio supply)</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">32</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">DEC2</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">1.3 V regulator supply decoupling (Radio supply)</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">33</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">DEC3</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Power supply decoupling</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">34</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">XC1</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Analog input</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Connection for 32 MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">35</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">XC2</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Analog input</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Connection for 32 MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">36</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VDD</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Power supply</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="4" headers="d14800159e72 d14800159e76 d14800159e80 d14800159e84" rowspan="1" valign="top"><strong class="ph b">Top side of chip</strong></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">37</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.25</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">38</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.26</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">39</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">P0.27</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">40</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.28</p>
+<p class="p">AIN4</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">41</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.29</p>
+<p class="p">AIN5</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">42</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.30</p>
+<p class="p">AIN6</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">43</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">
+<p class="p">P0.31</p>
+<p class="p">AIN7</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">General purpose I/O pin<a class="xref" href="pin.html#qfn48__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">44</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">NC</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top"> </td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top"><p class="p">No connect</p>
+Leave unconnected</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">45</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">46</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">DEC4</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">
+<p class="p">1.3 V regulator supply decoupling</p>
+<p class="p">Input from DC/DC regulator</p>
+<p class="p">Output from 1.3 V LDO</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">47</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">DCC</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">DC/DC regulator output </td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">48</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VDD</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Power supply</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="4" headers="d14800159e72 d14800159e76 d14800159e80 d14800159e84" rowspan="1" valign="top"><strong class="ph b">Bottom of chip</strong></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e72" rowspan="1" valign="top">Die pad</td>
+<td class="entry" colspan="1" headers="d14800159e76" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e80" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e84" rowspan="1" valign="top">Ground pad <p class="p">Exposed die pad must be connected to ground (VSS) for proper
+device operation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">
+</p>
+</div>
+</div>
+</div>
+<div class="topic reference nested1" id="concept_r4r_4lr_2q">
+<h2 class="title topictitle2">WLCSP ball assignments</h2>
+<div class="body refbody"><p class="shortdesc"><!-- --></p>
+<div class="section">
+<div class="fig fignone" id="concept_r4r_4lr_2q__fig_wlcsp50"><span class="figcap">Figure 2. WLCSP ball assignments, top view</span>
+<br clear="none" /><div class="imagecenter"><embed class="image imagecenter" height="240" id="concept_r4r_4lr_2q__image_z3v_tlc_lw" src="chapters/pin/doc/image/nrf52832_cixx_pinout.svg" /></div><br clear="none" />
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple" frame="border" id="concept_r4r_4lr_2q__table_pinout_wlcsp50" rules="all" summary=""><caption><span class="tablecap">Table 2. WLCSP ball assignments</span></caption>
+<thead align="left" class="thead">
+<tr class="row">
+<th class="entry" colspan="1" id="d14800159e1327" rowspan="1" valign="top"><strong class="ph b">Ball</strong></th>
+<th class="entry" colspan="1" id="d14800159e1331" rowspan="1" valign="top"><strong class="ph b">Name</strong></th>
+<th class="entry" colspan="1" id="d14800159e1335" rowspan="1" valign="top"> </th>
+<th class="entry" colspan="1" id="d14800159e1337" rowspan="1" valign="top"><strong class="ph b">Description</strong></th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">XC2</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Analog input</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Connection for 32 MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">DEC2</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">1.3 V regulator supply decoupling (Radio supply)</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.28</p>
+<p class="p">AIN4</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.29</p>
+<p class="p">AIN5</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.30</p>
+<p class="p">AIN6</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></p>
+ <p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">DEC4</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">1.3 V regulator supply decoupling</p>
+<p class="p">Input from DC/DC converter. Output from 1.3 V LDO</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">A7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VDD</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Power supply</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">XC1</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Analog input</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Connection for 32 MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.25</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.27</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.31</p>
+<p class="p">AIN7</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">DCC</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">DC/DC converter output</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">B7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">DEC1</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">0.9 V regulator digital supply decoupling</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">DEC3</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Power supply decoupling</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">NC</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">N/A</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Not connected</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.02</p>
+<p class="p">AIN0</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">C7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.01</p>
+<p class="p">XL2</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Connection for 32.768 kHz crystal (LFXO)</p>
+</td>
+</tr>
+ <tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">D1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">ANT</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">RF</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Single-ended radio antenna connection</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">D2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VSS_PA</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Ground (Radio supply)</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">D3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.26</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O <a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">D6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.03</p>
+<p class="p">AIN1</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">D7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.00</p>
+<p class="p">XL1</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Connection for 32.768 kHz crystal (LFXO)</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">E1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.24</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">E2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.23</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">E3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">E6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.04</p>
+<p class="p">AIN2</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">E7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.05</p>
+<p class="p">AIN3</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">SAADC/COMP/LPCOMP input</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">SWDCLK</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital input</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Serial wire debug clock input for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.22</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>.</sup></a></td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.19</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.11</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VSS</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.07</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">F7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.06</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">SWDIO</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Serial wire debug I/O for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.20</p>
+<p class="p">TRACECLK</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port clock output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.17</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.13</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">NFC2</p>
+<p class="p">P0.10</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">NFC input</p>
+<p class="p">Digital I/O</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">NFC antenna connection</p>
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">NFC1</p>
+<p class="p">P0.09</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">NFC input</p>
+<p class="p">Digital I/O</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">NFC antenna connection</p>
+<p class="p">General purpose I/O<a class="xref" href="pin.html#concept_r4r_4lr_2q__reuse-fn2" shape="rect"><sup>.</sup></a></p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">G7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.08</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H1</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.21</p>
+<p class="p">nRESET</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Configurable as pin reset</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H2</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.18</p>
+<p class="p">TRACEDATA[0]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H3</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.16</p>
+<p class="p">TRACEDATA[1]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H4</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.15</p>
+<p class="p">TRACEDATA[2]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H5</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">
+<p class="p">P0.14</p>
+<p class="p">TRACEDATA[3]</p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">
+<p class="p">Digital I/O</p>
+<p class="p"> </p>
+</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">
+<p class="p">General purpose I/O</p>
+<p class="p">Trace port output</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H6</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">P0.12</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Digital I/O</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e1327" rowspan="1" valign="top">H7</td>
+<td class="entry" colspan="1" headers="d14800159e1331" rowspan="1" valign="top">VDD</td>
+<td class="entry" colspan="1" headers="d14800159e1335" rowspan="1" valign="top">Power</td>
+<td class="entry" colspan="1" headers="d14800159e1337" rowspan="1" valign="top">Power supply</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">
+</p>
+</div>
+</div>
+</div>
+<div class="topic concept nested1" id="concept_rfc_x1z_2q">
+<h2 class="title topictitle2">GPIO usage restrictions</h2>
+<div class="body conbody"><p class="shortdesc"><!-- --></p>
+<p class="p">For more information on standard drive, see <a class="xref" href="gpio.html#concept_zyt_tcb_lr" shape="rect" title="The general purpose input/output (GPIO) is organized as one port with up to 32 I/Os (dependent on package) enabling access and control of up to 32 pins through one port. Each GPIO can be accessed individually.">GPIO — General purpose input/output</a>. Low
+frequency I/O is a signal with a frequency up to 10 kHz.</p>
+</div>
+<div class="topic concept nested2" id="concept_flx_lbz_2q">
+<h3 class="title topictitle3">GPIO located near the radio</h3>
+<div class="body conbody"><p class="shortdesc">Radio performance parameters, such as sensitivity, may be affected by high frequency
+digital I/O with large sink/source current close to the Radio power supply and antenna
+pins.</p>
+<p class="p"> <a class="xref" href="pin.html#concept_flx_lbz_2q__table_gpio_and_radio_qfn48" shape="rect">Table 3</a> and <a class="xref" href="pin.html#concept_flx_lbz_2q__table_gpio_and_radio_wlcsp" shape="rect">Table 4</a> identify some GPIO that
+have recommended usage guidelines to maximize radio performance in an application.</p>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple" frame="border" id="concept_flx_lbz_2q__table_gpio_and_radio_qfn48" rules="all" summary=""><caption><span class="tablecap">Table 3. GPIO recommended usage for QFN48 package</span></caption>
+<thead align="left" class="thead">
+<tr class="row">
+<th class="entry" colspan="1" id="d14800159e2575" rowspan="1" valign="top">Pin</th>
+<th class="entry" colspan="1" id="d14800159e2578" rowspan="1" valign="top">GPIO</th>
+<th class="entry" colspan="1" id="d14800159e2581" rowspan="1" valign="top">Recommended usage</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">27</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.22</td>
+<td class="entry" colspan="1" headers="d14800159e2581" rowspan="10" valign="top">Low drive, low frequency I/O only.</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">28</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.23</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">29</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.24</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">37</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.25</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">38</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.26</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">39</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.27</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">40</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.28</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">41</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.29</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">42</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.30</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2575" rowspan="1" valign="top">43</td>
+<td class="entry" colspan="1" headers="d14800159e2578" rowspan="1" valign="top">P0.31</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple" frame="border" id="concept_flx_lbz_2q__table_gpio_and_radio_wlcsp" rules="all" summary=""><caption><span class="tablecap">Table 4. GPIO recommended usage for WLCSP package</span></caption>
+<thead align="left" class="thead">
+<tr class="row">
+<th class="entry" colspan="1" id="d14800159e2702" rowspan="1" valign="top">Pin</th>
+<th class="entry" colspan="1" id="d14800159e2705" rowspan="1" valign="top">GPIO</th>
+<th class="entry" colspan="1" id="d14800159e2708" rowspan="1" valign="top">Recommended usage</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">F2</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.22</td>
+<td class="entry" colspan="1" headers="d14800159e2708" rowspan="10" valign="top">Low drive, low frequency I/O only.</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">E2</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.23</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">E1</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.24</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">B3</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.25</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">D3</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.26</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">B4</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.27</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">A3</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.28</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">A4</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.29</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">A5</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.30</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2702" rowspan="1" valign="top">B5</td>
+<td class="entry" colspan="1" headers="d14800159e2705" rowspan="1" valign="top">P0.31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="topic concept nested2" id="concept_sq5_lcz_2q">
+<h3 class="title topictitle3">NFC antenna pins</h3>
+<div class="body conbody"><p class="shortdesc">Two physical pins can be configured either as NFC antenna pins (factory default), or as
+GPIOs, as shown below.</p>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple" frame="border" id="concept_sq5_lcz_2q__table_gpio_and_nfct" rules="all" summary=""><caption><span class="tablecap">Table 5. GPIO pins used by NFC</span></caption>
+<thead align="left" class="thead">
+<tr class="row">
+<th class="entry" colspan="1" id="d14800159e2847" rowspan="1" valign="top">NFC pad name</th>
+<th class="entry" colspan="1" id="d14800159e2850" rowspan="1" valign="top">GPIO</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2847" rowspan="1" valign="top">NFC1</td>
+<td class="entry" colspan="1" headers="d14800159e2850" rowspan="1" valign="top">P0.09</td>
+</tr>
+<tr class="row">
+<td class="entry" colspan="1" headers="d14800159e2847" rowspan="1" valign="top">NFC2</td>
+<td class="entry" colspan="1" headers="d14800159e2850" rowspan="1" valign="top">P0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="p">When configured as NFC antenna pins, the GPIOs on those pins will automatically be set to
+DISABLE state and a protection circuit will be enabled preventing the chip from being damaged
+in the presence of a strong NFC field. The protection circuit will short the two pins together
+if voltage difference exceeds approximately 2 V.</p>
+<p class="p">For information on how to configure these pins as normal GPIOs, see <a class="xref" href="nfc.html#concept_kmr_nxj_1s" shape="rect" title="The NFCT peripheral (referred to as the 'NFC peripheral' from now on) supports communication signal interface type A and 106 kbps bit rate from the NFC Forum.">NFCT — Near field communication tag</a> and <a class="xref" href="uicr.html#concept_rnp_grp_xr" shape="rect" title="The user information configuration registers (UICRs) are non-volatile memory (NVM) registers for configuring user specific settings.">UICR — User information configuration registers</a>. Note that the device
+will not be protected against strong NFC field damage if the pins are configured as GPIO and
+an NFC antenna is connected to the device. The pins will always be configured as NFC pins
+during power-on reset until the configuration is set according to the UICR register.</p>
+<p class="p">These two pins will have some limitations when configured as GPIO. The pin capacitance will be
+higher on these pins, and there is some current leakage between the two pins if they are
+driven to different logical values. To avoid leakage between the pins when configured as GPIO,
+these GPIOs should always be at the same logical value whenever entering one of the device
+power saving modes. See <a class="xref" href="gpio.html#unique_1260823213" shape="rect">Electrical
+specification</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fn"><a id="qfn48__reuse-fn" shape="rect"><sup>1</sup></a> See <a class="xref" href="pin.html#concept_flx_lbz_2q" shape="rect" title="Radio performance parameters, such as sensitivity, may be affected by high frequency digital I/O with large sink/source current close to the Radio power supply and antenna pins.">GPIO located near the radio</a> for more information.</div><div class="fn"><a id="qfn48__reuse-fn2" shape="rect"><sup>2</sup></a> See <a class="xref" href="pin.html#concept_sq5_lcz_2q" shape="rect" title="Two physical pins can be configured either as NFC antenna pins (factory default), or as GPIOs, as shown below.">NFC antenna pins</a> for more information.</div><div class="fn"><a id="concept_r4r_4lr_2q__reuse-fn" shape="rect"><sup>3</sup></a> See <a class="xref" href="pin.html#concept_flx_lbz_2q" shape="rect" title="Radio performance parameters, such as sensitivity, may be affected by high frequency digital I/O with large sink/source current close to the Radio power supply and antenna pins.">GPIO located near the radio</a> for more information.</div><div class="fn"><a id="concept_r4r_4lr_2q__reuse-fn2" shape="rect"><sup>4</sup></a> See <a class="xref" href="pin.html#concept_sq5_lcz_2q" shape="rect" title="Two physical pins can be configured either as NFC antenna pins (factory default), or as GPIOs, as shown below.">NFC antenna pins</a> for more information.</div><div class="topicfooter">
+<hr />
+<a href="/cdn-cgi/l/email-protection#fd99929e9b9898999f9c9e96bd93928f99949e8e989094d39392c28e889f97989e89c0b9929e88909893899c89949293d8cfcd9b9898999f9c9e96" shape="rect">Documentation feedback</a> | <a href="https://devzone.nordicsemi.com/questions/" shape="rect" target="_blank">Developer Zone</a> | Updated 2021-11-08
+</div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'7d42b07218b80721',m:'hZVq.yNRahLtsTVI0uY8xWA.7jBvhD4ysTgrkMqsrLM-1686243607-0-Ab6qeHoDIUPe9CMCDMby/Lw88Es0mWILjwqPBowCpfWr'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

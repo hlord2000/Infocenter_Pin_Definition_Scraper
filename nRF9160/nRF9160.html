@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="(C) Copyright 2021" name="copyright" />
+<meta content="(C) Copyright 2021" name="DC.rights.owner" />
+<meta content="concept" name="DC.Type" />
+<meta content="Pin assignments" name="DC.Title" />
+<meta content="This section describes the pin assignment and the pin functions." name="abstract" />
+<meta content="This section describes the pin assignment and the pin functions." name="description" />
+<meta content="chapters/hw_layout/hw_layout.html" name="DC.Relation" scheme="URI" />
+<meta content="XHTML" name="DC.Format" />
+<meta content="pin_assign" name="DC.Identifier" />
+<link href="commonltr.css" rel="stylesheet" type="text/css" />
+<title>Pin assignments</title>
+<link href="../PRODUCT_PLUGIN/nordic_2x.css" rel="stylesheet" type="text/css" />
+<link href="https://infocenter.nordicsemi.com/css/infocenter_css.php" rel="stylesheet" type="text/css" />
+<script src="../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+<link charset="ISO-8859-1" href="../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css" />
+<script src="../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../index.jsp?topic=%2Fps_nrf9160%2Fpin.html" + anchorParam);
+}
+</script>
+</head>
+<body>
+<div class="help_breadcrumbs"><a href="../../topic/struct_nrf91/struct/nrf91.html" shape="rect">nRF91 Series</a> &gt; <a href="../../topic/struct_nrf91/struct/nrf9160.html" shape="rect">nRF9160</a> &gt; <a href="../../topic/ps_nrf9160/nRF9160_html5_keyfeatures.html" shape="rect">nRF9160 Product Specification</a> &gt; <a href="../../topic/ps_nrf9160/chapters/hw_layout/hw_layout.html" shape="rect">Hardware and layout</a></div>
+<div>
+<script type="text/javascript" xml:space="preserve">
+<!-- Google Analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72983410-1', 'auto');
+  ga('send', 'pageview');
+<!-- end Google Analytics -->
+<!-- Start of Async HubSpot Analytics Code -->
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/1961165.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+<!-- End of Async HubSpot Analytics Code -->
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" xml:space="preserve">
+</script>
+</div>
+<div id="headerlinks"><span class="copyURL"><a href="#" id="theURL" shape="rect">Copy URL</a></span></div><div aria-labelledby="ariaid-title1" class="nested0" id="pin_assign">
+<h1 class="title topictitle1" id="ariaid-title1">Pin assignments</h1>
+<div class="body conbody"><p class="shortdesc">This section describes the pin assignment and the pin functions.</p>
+<p class="p">This device provides flexibility when it comes to routing and configuration of the GPIO pins.
+However, some pins have recommendations for how the pin should be configured or what it should be
+used for. See
+<a class="xref" href="#reference_hyx_mmw_pv__table_gf4_nnw_pv" shape="rect">LGA pin assignments</a> for
+more information about this.</p>
+</div>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="chapters/hw_layout/hw_layout.html" shape="rect" title="The following sections describe nRF9160 hardware and layout specifications.">Hardware and layout</a></div>
+</div>
+</div><div aria-labelledby="ariaid-title2" class="topic reference nested1" id="reference_hyx_mmw_pv">
+<h2 class="title topictitle2" id="ariaid-title2">LGA pin assignments</h2>
+<div class="body refbody"><p class="shortdesc">The pin assignment table and figure describe the assignments.</p>
+<div class="section">
+<div class="fig fignone" id="reference_hyx_mmw_pv__fig_vrt_4mw_pv"><span class="figcap"><span class="fig--title-label">Figure 1. </span>LGA pin assignments, top view</span>
+<br clear="none" /><div class="imagecenter"><img alt="LGA pin assignments, top view" class="image" height="370" id="reference_hyx_mmw_pv__image_npk_d5m_1w" src="chapters/pin/image/nRF9160_pinout_9.5x1.svg" /></div><br clear="none" />
+</div>
+</div>
+<div class="section">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table simple long" frame="border" id="reference_hyx_mmw_pv__table_gf4_nnw_pv" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>LGA pin assignments</span></caption><colgroup span="1"><col span="1" style="width:9.090909090909092%" /><col span="1" style="width:25%" /><col span="1" style="width:26.36363636363636%" /><col span="1" style="width:39.54545454545455%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry nocellnorowborder" colspan="1" id="d166234e105" rowspan="1" style="vertical-align:top;">Pin no</th>
+<th class="entry nocellnorowborder" colspan="1" id="d166234e108" rowspan="1" style="vertical-align:top;">Pin name</th>
+<th class="entry nocellnorowborder" colspan="1" id="d166234e111" rowspan="1" style="vertical-align:top;">Function</th>
+<th class="entry cell-norowborder" colspan="1" id="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Description</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">1</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">2</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.05</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">3</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.06</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">4</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.07</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">5</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">6</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">7</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">8</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">9</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">10</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+ <td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">11</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">12</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">VDD_GPIO</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">GPIO power supply input and logic level</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">13</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">DEC0</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Power supply decoupling. Reserved for Nordic use.</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">14</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">15</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.08</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">16</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.09</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">17</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">18</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.10</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">19</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.11</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">20</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.12</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">21</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">22</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">VDD2</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Supply voltage input</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">23</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.13</p>
+<p class="p">AIN0</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">24</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.14</p>
+<p class="p">AIN1</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">25</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.15</p>
+<p class="p">AIN2</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">26</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.16</p>
+<p class="p">AIN3</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">27</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">28</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.17</p>
+<p class="p">AIN4</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">29</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.18</p>
+<p class="p">AIN5</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">30</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.19</p>
+<p class="p">AIN6</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">31</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">32</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">nRESET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">SoC system reset</p>
+<div class="note note"><span class="notetitle">Note:</span> External pull-up not allowed.</div>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">33</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SWDCLK</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital input</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Serial wire debug clock input for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">34</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SWDIO</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Serial wire debug I/O for debug and programming</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">35</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.20</p>
+<p class="p">AIN7</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Analog input</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Analog input.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">36</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">37</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.21</p>
+<p class="p">TRACECLK</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Trace clock</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Trace buffer clock (optional).</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">38</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.22</p>
+<p class="p">TRACEDATA0</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Trace data</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Trace buffer TRACEDATA[0] (optional).</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">39</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.23</p>
+<p class="p">TRACEDATA1</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Trace data</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Trace buffer TRACEDATA[1] (optional).</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">40</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.24</p>
+<p class="p">TRACEDATA2</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Trace data</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Trace buffer TRACEDATA[2] (optional).</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">41</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">42</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">
+<p class="p">P0.25</p>
+<p class="p">TRACEDATA3</p>
+</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">
+<p class="p">Digital I/O (SoC)</p>
+<p class="p">Trace data</p>
+</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">General purpose I/O.</p>
+<p class="p">Trace buffer TRACEDATA[3] (optional).</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">43</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SIM_RST</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">SIM reset</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">44</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">45</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SIM_DET</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">SIM detect <p class="p">Not used. Needs to be left floating.</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">46</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SIM_CLK</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">SIM clock</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">47</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">48</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SIM_IO</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">SIM data</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">49</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SIM_1V8</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">SIM 1.8 V power supply output</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">50</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">51</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">52</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">53</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">MAGPIO2</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">1.8 V general purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">54</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">MAGPIO1</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">1.8 V general purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">55</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">MAGPIO0</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">1.8 V general purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">56</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">57</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">VIO</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">MIPI RFFE control interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">58</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SCLK</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">MIPI RFFE control interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">59</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">SDATA</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">MIPI RFFE control interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">60</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">61</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">ANT</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Single-ended 50 Ω LTE antenna pin</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">62</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">63</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">64</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">AUX</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Single-ended 50 Ω ANT loop-back pin</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">65</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">66</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">67</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GPS</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Single-ended 50 Ω GPS input pin</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">68</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">69</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+ <td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">70</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">71</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">72</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">73</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">74</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">75</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">76</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">77</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">78</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">79</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">80</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">81</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">82</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">83</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.26</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">84</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.27</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">85</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">86</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.28</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">87</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.29</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">88</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.30</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">89</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.31</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">90</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">91</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">COEX2</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Coexistence interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">92</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">COEX1</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Coexistence interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">93</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">COEX0</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Coexistence interface</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">94</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">95</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.00</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">96</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.01</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">97</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.02</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">98</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">GND_Shield</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">99</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.03</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">100</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">P0.04</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Digital I/O (SoC)</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">General purpose I/O</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">101</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">ENABLE</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">
+<p class="p">Enable for the SiP internal regulator for the nRF91 SoC.</p>
+<div class="note note"><span class="notetitle">Note:</span> The nRF91 will not start until this pin is enabled.</div>
+</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">102</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">VDD1</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Supply voltage</td>
+</tr>
+<tr class="row">
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">103</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry nocellnorowborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cell-norowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Ground</td>
+</tr>
+<tr class="row">
+<td class="entry row-nocellborder" colspan="1" headers="d166234e105" rowspan="1" style="vertical-align:top;">104-127</td>
+<td class="entry row-nocellborder" colspan="1" headers="d166234e108" rowspan="1" style="vertical-align:top;">Reserved</td>
+<td class="entry row-nocellborder" colspan="1" headers="d166234e111" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d166234e114" rowspan="1" style="text-align:left;vertical-align:top;">Do not connect/reserved for future use</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="topicfooter" id="thefooter">
+<script src="../PRODUCT_PLUGIN/footer.js" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+    document.getElementById("thefooter").innerHTML = getFooter("2021-10-13");
+    document.getElementById("theURL").href = getURL();
+    document.getElementById("theURL").onclick = promptCopy;
+
+$(".childlinks a[href*='.pdf'],.childlinks a[href*='.PDF']").attr("target","_blank");
+
+$("a[href^='../..https://']")
+   .each(function()
+   {
+      this.href = this.href.replace(/^.+https:\/\//i, "https://");
+   });
+</script>
+<noscript>
+<hr/>
+<a href="mailto:docfeedback@nordicsemi.no?subject=Documentation%20feedback" id="maillink" shape="rect">Documentation feedback</a> | <a href="https://devzone.nordicsemi.com/questions/" shape="rect" target="_blank">Developer Zone</a> | <a href="http://response.nordicsemi.com/subscribe-to-our-newsletters" shape="rect" target="_blank">Subscribe</a> | Updated 2021-10-13
+</noscript>
+</div><script>(function(){var js = "window['__CF$cv$params']={r:'7d42b0523802184b',m:'FFM_WITdbAItgyXSaXN0hJMkByAO9R2g5DDlDz7k6do-1686243602-0-AeTjfdbUQN0yIHcbMQvQfl6Rwa31tDuUQd7hLY7oACEC'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="(C) Copyright 2023" name="copyright" />
+<meta content="(C) Copyright 2023" name="DC.rights.owner" />
+<meta content="DITA-OT" name="generator" /><meta content="concept" name="DC.type" />
+<meta content="Hardware and layout" name="DC.title" />
+<meta content="This section describes nRF7002 hardware and layout specifications." name="abstract" />
+<meta content="This section describes nRF7002 hardware and layout specifications." name="description" />
+<meta content="../../../keyfeatures_html5.html" name="DC.relation" scheme="URI" />
+<meta content="XHTML" name="DC.format" />
+<meta content="frontpage_info" name="DC.identifier" />
+<link href="commonltr.css" rel="stylesheet" type="text/css" />
+<title>nRF7002 hardware and layout</title>
+<link href="../../../../PRODUCT_PLUGIN/nordic_2x.css" rel="stylesheet" type="text/css" />
+<link href="https://infocenter.nordicsemi.com/css/infocenter_css.php" rel="stylesheet" type="text/css" />
+<script src="../../../../../advanced/synchWithToc.js" type="text/javascript" xml:space="preserve"><!-- --></script>
+<link charset="ISO-8859-1" href="../../../../../content/org.eclipse.help.webapp/advanced/breadcrumbs.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../content/org.eclipse.help/livehelp.js" type="text/javascript" xml:space="preserve"> </script>
+<script type="text/javascript">
+if( self == top ){
+  var  anchorParam = location.hash.length > 0 ? '\u0026anchor=' + location.hash.substr(1) : '';
+  window.location.replace( "../../../../../index.jsp?topic=%2Fps_nrf7002%2Fchapters%2Fhw_layout%2Fdoc%2Fhw_layout.html" + anchorParam);
+}
+</script>
+</head>
+<body>
+<div class="help_breadcrumbs"><a href="../../../../../topic/struct_nrf70/struct/nrf70.html" shape="rect">nRF70 Series</a> &gt; <a href="../../../../../topic/struct_nrf70/struct/nrf7002.html" shape="rect">nRF7002</a> &gt; <a href="../../../../../topic/ps_nrf7002/keyfeatures_html5.html" shape="rect">nRF7002 Product Specification</a></div>
+<div>
+<script type="text/javascript" xml:space="preserve">
+<!-- Google Analytics -->
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72983410-1', 'auto');
+  ga('send', 'pageview');
+<!-- end Google Analytics -->
+<!-- Start of Async HubSpot Analytics Code -->
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/1961165.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+<!-- End of Async HubSpot Analytics Code -->
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" xml:space="preserve">
+</script>
+</div>
+<div id="headerlinks"><span class="copyURL"><a href="#" id="theURL" shape="rect">Copy URL</a></span></div><div aria-labelledby="ariaid-title1" class="nested0" id="frontpage_info">
+<h1 class="title topictitle1" id="ariaid-title1">Hardware and layout</h1>
+<p class="shortdesc">This section describes <span class="keyword">nRF7002</span> hardware and layout
+specifications.</p>
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../../keyfeatures_html5.html" shape="rect" title="This Product Specification contains functional descriptions, register tables, and electrical specifications, and is organized into chapters based on the modules and peripherals that are available in this IC.">nRF7002 Product Specification</a></div>
+</div>
+</div><div aria-labelledby="ariaid-title2" class="topic concept nested1" id="pin_assign">
+<h2 class="title topictitle2" id="ariaid-title2">Pin assignments</h2>
+<div class="body conbody"><p class="shortdesc">The pin assignment figure and tables describe the pinouts for the device. There are also
+recommendations for how the <a href="../../glossary/glossary.html#gpio" shape="rect" title="A digital signal pin that can be used as input, output, or both. It is uncommitted and can be controlled by the user at runtime."><dfn class="term abbreviated-form">General-Purpose Input/Output (GPIO)</dfn></a> pins should be configured, in
+addition to any usage restrictions.</p>
+<div class="section">
+<div class="fig fignone" id="pin_assign__fig_dqr_nhl_qtb"><span class="figcap"><span class="fig--title-label">Figure 1. </span>Pin assignments</span>
+<div class="imagecenter"><img alt="Pin assignments" class="image" id="pin_assign__image_lp5_k32_1vb" src="image/nRF7002_pinout.svg" /></div>
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="pin_assign__table_buck" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Pin assignments</span></caption><colgroup span="1"><col span="1" style="width:11.363636363636363%" /><col span="1" style="width:20.454545454545453%" /><col span="1" style="width:17.045454545454543%" /><col span="1" style="width:51.13636363636363%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d2558e98" rowspan="1" style="vertical-align:top;">Pin</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e101" rowspan="1" style="vertical-align:top;">Name</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e104" rowspan="1" style="vertical-align:top;">Function</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e107" rowspan="1" style="vertical-align:top;">Description</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">OTPVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">2</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">3</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">4</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">5</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">6</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">7</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">TXRF&lt;1&gt;</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">8</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">PAVDD&lt;1&gt;</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">9</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">TXRF&lt;0&gt;</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">RF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">10</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">PAVDD&lt;0&gt;</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">11</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">SXLDO</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">12</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">PALDO</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">13</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">VBAT</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">14</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">RFVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">15</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">RFBUCKVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">16</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">XOLDO</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">17</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">XOP</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">40MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">18</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">XON</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Analog input</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">40MHz crystal</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">19</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">AFELDO</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">20</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">AFEVBAT</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">21</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">22</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">23</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">24</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">N.C.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Do not connect</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">25</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKVBAT</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">26</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKOUT</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">DCDC output </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">27</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKVSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">DCDC GND </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">28</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKVSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">DCDC GND </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">29</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKVMID</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Voltage reference decoupling pin </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">30</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKEN</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">PWR IP enable pin </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">31</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">BUCKVBATS</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">32</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">PWRBUCKVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">33</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">DIGVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">34</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">PWRIOVDD</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">35</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI_CLK<br clear="none" />
+              SPI_CLK</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI Clock<br clear="none" />
+              SPI Clock</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">36</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI_SS<br clear="none" />
+              SPI_SS</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI Slave select<br clear="none" />
+              SPI Slave select</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">37</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI_DATA0<br clear="none" />
+              SPI_MOSI</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI data<br clear="none" />
+              SPI data</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">38</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI_DATA1<br clear="none" />
+              SPI_MISO</p>
+</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"><p class="lines">QSPI data<br clear="none" />
+              SPI data</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">39</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">QSPI_DATA2 </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">QSPI data</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">40</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">QSPI_DATA3 </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">QSPI data</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">41</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">COEX_STATUS0 </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+ <td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Coex interface</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">42</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">COEX_REQ </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Coex interface</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">43</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">COEX_GRANT </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Coex interface</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">44</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">SW_CTRL0 </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">External switch control </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">45</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">SW_CTRL1 </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">External switch control </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">46</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">HOST_IRQ </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Digital I/O</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Host processor interrupt request </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">47</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">48</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">IOVDD </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e98" rowspan="1" style="vertical-align:top;">Die pad</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e101" rowspan="1" style="vertical-align:top;">VSS</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e104" rowspan="1" style="vertical-align:top;">Power</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e107" rowspan="1" style="vertical-align:top;">Ground pad. Exposed die pad must be connected to ground (VSS) for proper device operation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title3" class="topic concept nested1" id="system">
+<h2 class="title topictitle2" id="ariaid-title3">Mechanical specifications</h2>
+<div class="body conbody"><p class="shortdesc">Dimensions in millimeters for the QFN 6 x 6 mm package.</p>
+<img class="image" id="system__image_w3g_4k2_4tb" src="image/nRF700_mech_spec.svg" />
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="system__table_wlcsp_dim" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 2. </span>Package dimensions in millimeters</span></caption><colgroup span="1"><col span="1" style="width:12.208398133748057%" /><col span="1" style="width:9.486780715396579%" /><col span="1" style="width:8.320373250388803%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /><col span="1" style="width:7.776049766718507%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d2558e902" rowspan="1" style="vertical-align:top;"> </th>
+<th class="entry cellrowborder" colspan="1" id="d2558e904" rowspan="1" style="vertical-align:top;">A</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e907" rowspan="1" style="vertical-align:top;">A1</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e910" rowspan="1" style="vertical-align:top;">A2</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e913" rowspan="1" style="vertical-align:top;">b</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e917" rowspan="1" style="vertical-align:top;">D</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e920" rowspan="1" style="vertical-align:top;">E</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e923" rowspan="1" style="vertical-align:top;">D2</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e926" rowspan="1" style="vertical-align:top;">E2</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e929" rowspan="1" style="vertical-align:top;">e</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e932" rowspan="1" style="vertical-align:top;">K</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e936" rowspan="1" style="vertical-align:top;">L</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e902" rowspan="1" style="vertical-align:top;">Min.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e904" rowspan="1" style="vertical-align:top;">0.8</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e907" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e910" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e913" rowspan="1" style="vertical-align:top;">0.15</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e917" rowspan="1" style="vertical-align:top;">5.9</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e920" rowspan="1" style="vertical-align:top;">5.9</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e923" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e926" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e929" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e932" rowspan="1" style="vertical-align:top;">0.2</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e936" rowspan="1" style="vertical-align:top;">0.2</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e902" rowspan="1" style="vertical-align:top;">Nom.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e904" rowspan="1" style="vertical-align:top;">0.85</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e907" rowspan="1" style="vertical-align:top;">0.035</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e910" rowspan="1" style="vertical-align:top;">0.65</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e913" rowspan="1" style="vertical-align:top;">0.2</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e917" rowspan="1" style="vertical-align:top;">6</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e920" rowspan="1" style="vertical-align:top;">6</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e923" rowspan="1" style="vertical-align:top;">4.6</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e926" rowspan="1" style="vertical-align:top;">4.6</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e929" rowspan="1" style="vertical-align:top;">0.4</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e932" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e936" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e902" rowspan="1" style="vertical-align:top;">Max.</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e904" rowspan="1" style="vertical-align:top;">0.9</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e907" rowspan="1" style="vertical-align:top;">0.05</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e910" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e913" rowspan="1" style="vertical-align:top;">0.25</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e917" rowspan="1" style="vertical-align:top;">6.1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e920" rowspan="1" style="vertical-align:top;">6.1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e923" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e926" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e929" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e932" rowspan="1" style="vertical-align:top;"> </td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e936" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title4" class="topic concept nested1" id="unique_1799575672">
+<h2 class="title topictitle2" id="ariaid-title4">Reference circuitry</h2>
+<div class="body conbody"><p class="shortdesc">To ensure good RF performance when designing <a href="../../glossary/glossary.html#pcb" shape="rect" title="A board that connects electronic components."><dfn class="term abbreviated-form">Printed Circuit Board (PCB)</dfn></a>s, it is
+highly recommended to use the PCB layouts and component values provided by Nordic
+Semiconductor.</p>
+</div>
+<div aria-labelledby="ariaid-title5" class="topic concept nested2" id="reference_schematic">
+<h3 class="title topictitle3" id="ariaid-title5">Reference schematic</h3>
+<div class="body conbody"><p class="shortdesc">Circuit configuration, showing the schematic and Bill of Materials (BOM) table for
+<span class="keyword">nRF7002</span>.</p>
+<div class="fig fignone" id="reference_schematic__fig_wyl_gvm_hvb"><span class="figcap"><span class="fig--title-label">Figure 2. </span>nRF7002 reference schematic</span>
+<div class="imagecenter"><img alt="nRF7002 reference schematic" class="image" id="reference_schematic__image_xyl_gvm_hvb" src="image/nRF7002_schematic.svg" /></div>
+</div>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="reference_schematic__table_r2m_hq4_zqb" rules="all" summary=""><caption><span class="tablecap"><span class="table--title-label">Table 3. </span>BOM for <span class="keyword">nRF7002</span></span></caption><colgroup span="1"><col span="1" style="width:14.492753623188406%" /><col span="1" style="width:13.043478260869568%" /><col span="1" style="width:46.376811594202906%" /><col span="1" style="width:26.086956521739136%" /></colgroup><thead class="thead" style="text-align:left;">
+<tr class="row">
+<th class="entry cellrowborder" colspan="1" id="d2558e1143" rowspan="1" style="vertical-align:top;">Designator</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e1146" rowspan="1" style="vertical-align:top;">Value</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e1149" rowspan="1" style="vertical-align:top;">Description</th>
+<th class="entry cellrowborder" colspan="1" id="d2558e1152" rowspan="1" style="vertical-align:top;">Note</th>
+</tr>
+</thead>
+<tbody class="tbody">
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">U1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;"><span class="ph">nRF7002</span></td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Wi-Fi® 6 <span class="ph">Dual Band </span>companion chip</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">U2</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">2.4 / 5 GHz</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">WLAN Dual Band Diplexer</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">X1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">40 MHz</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Crystal SMD 1612, 40MHz, Cl=8pF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">ESR max 100 ohm</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">L1</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">3.3µH</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Inductor, 1A, ±20%, 200mOhm</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C1, C2, C6, C11</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">4.7µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 4.7µF 25V X6S 0603,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">
+<p class="p">Place C1 close to BUCKVBAT pin</p>
+<p class="p">Place C2 close to L1</p>
+<p class="p">Place C11 close to PALDO pin</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C3</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">0.22uF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 0.22µF 10V X5R 0201, ±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">
+<p class="p">Place C3 close to RFBUCKVDD pin</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C4, C14</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">0.47uF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 0.47µF 6.3V X5R 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">
+<p class="p">Place C4 close to PWRBUCKVDD pin</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C5</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">1.0µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 1.0µF 35V X5R 0402,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C7, C18</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">2.2µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 2.2µF 16V X7S 0603,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">
+<p class="p">Place C7 close to BUCKVBATS pin</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C8</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">10nF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 10nF 16V X7R 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C9</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">2.2µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 2.2µF 25V X5R 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C10</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">1.0µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 1.0µF 16V X6S 0402,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C12</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">100nF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 100nF 16V X7S 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;">
+<p class="p">Place C12 close to PAVDD0 pin</p>
+</td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C13</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">22nF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 22nF 10V X5R 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C15, C17</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">2.2µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 2.2µF 10V X5R 0201,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+<tr class="row">
+<td class="entry cellrowborder" colspan="1" headers="d2558e1143" rowspan="1" style="vertical-align:top;">C16</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1146" rowspan="1" style="vertical-align:top;">1.0µF</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1149" rowspan="1" style="vertical-align:top;">Capacitor, Ceramic, 1.0µF 10V X7S 0402,±10%</td>
+<td class="entry cellrowborder" colspan="1" headers="d2558e1152" rowspan="1" style="vertical-align:top;"> </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title6" class="topic concept nested2" id="supply_sequencing_requirements">
+<h3 class="title topictitle3" id="ariaid-title6">Supply sequencing requirements</h3>
+<div class="body conbody"><p class="shortdesc">The various supplies and BUCKEN need to be sequenced in order with delay
+requirements.</p>
+<p class="p">The power up sequence and requirements are:</p>
+<ul class="ul" id="supply_sequencing_requirements__ul_sph_mwm_hvb">
+<li class="li">Supply VBAT/BUCKVBAT/BUCKVBATS/AFEVBAT </li>
+<li class="li">Wait ≥ 6 ms</li>
+<li class="li">Assert BUCKEN</li>
+<li class="li">Wait ≥ 1 ms</li>
+<li class="li">Supply IOVDD</li>
+</ul>
+<p class="p">PWRIOVDD is an internally generated supply, used for supplying OTPVDD through an external
+connection. It cannot be used for anything else. This supply is automatically controlled in the
+device.</p>
+<p class="p">The power-down sequence and requirements are:</p>
+<ul class="ul" id="supply_sequencing_requirements__ul_pyz_lmf_vvb">
+<li class="li">De-assert BUCKEN and power down IOVDD</li>
+<li class="li">Power down VBAT</li>
+</ul>
+<p class="p">There are no specific timing delay requirements as long as the sequence is correct.</p>
+</div>
+</div>
+<div aria-labelledby="ariaid-title7" class="topic concept nested2" id="supply_system_alternatives">
+<h3 class="title topictitle3" id="ariaid-title7">Supply system alternatives</h3>
+<div class="body conbody"><p class="shortdesc">There are two options (high voltage and normal voltage) for connecting <span class="keyword">nRF7002</span> to an nRF5340 host, supporting dynamic powerup/powerdown of the <span class="keyword">nRF7002</span>. This dynamic control utilises an external switch to control the IOVDD
+supply. </p>
+<p class="p">The following figure shows the recommended connection between <span class="keyword">nRF7002</span>
+and the host <a href="../../glossary/glossary.html#mcu" shape="rect" title="A small computer on a single metal-oxide-semiconductor integrated circuit chip."><dfn class="term abbreviated-form">Microcontroller Unit (MCU)</dfn></a> (nRF5340).</p>
+<div class="fig fignone" id="supply_system_alternatives__fig_vgx_zsr_qtb"><span class="figcap"><span class="fig--title-label">Figure 3. </span>Supply system - high voltage mode</span>
+
+<div class="imagecenter"><img alt="Supply system - high voltage mode" class="image" id="supply_system_alternatives__image_ubv_bfh_dvb" src="image/supply_system_hv_mode_7002.svg" /></div>
+</div>
+<p class="p">Both nRF5340 (used in high voltage mode) and <span class="keyword">nRF7002</span> can be supplied
+from a single 3.6 V supply.</p>
+<p class="p">nRF5340 can provide a 1.8 V supply used for the IO supply on <span class="keyword">nRF7002</span>. An
+external switch is used to disconnect IOVDD on <span class="keyword">nRF7002</span> when not in use.
+The control of the switch is handled by the Wi-Fi driver on nRF5340.</p>
+<div class="fig fignone" id="supply_system_alternatives__fig_mvn_jzr_qtb"><span class="figcap"><span class="fig--title-label">Figure 4. </span>Supply system - normal voltage mode</span>
+<div class="imagecenter"><img alt="Supply system - normal voltage mode" class="image" id="supply_system_alternatives__image_ujk_qfh_dvb" src="image/supply_system_normal_mode_7002.svg" /></div>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title8" class="topic concept nested2" id="unique_32100070">
+<h3 class="title topictitle3" id="ariaid-title8">QSPI/SPI connections</h3>
+<div class="body conbody"><p class="shortdesc">The <span class="keyword">nRF7002</span> can be connected to the nRF5340 host either with a
+<a href="../../glossary/glossary.html#qspi" shape="rect" title="A Serial Peripheral Interface (SPI) controller that allows the use of multiple data lines."><dfn class="term abbreviated-form">Quad Serial Peripheral Interface (QSPI)</dfn></a> or a <a href="../../glossary/glossary.html#spi" shape="rect" title="Synchronous serial communication interface specification used for short-distance communication."><dfn class="term abbreviated-form">Serial Peripheral Interface (SPI)</dfn></a>. QSPI will normally be
+the preferred option, but in cases where QSPI on the host is used for other purposes SPI can be
+used.</p>
+<p class="p">The following figure shows the connection using QSPI between <span class="keyword">nRF7002</span> and
+the host MCU (nRF5340).</p>
+<div class="fig fignone" id="unique_32100070__fig_vgx_zsr_qtb2"><span class="figcap"><span class="fig--title-label">Figure 5. </span>QSPI connection</span>
+<div class="imagecenter"><img alt="QSPI connection" class="image" id="unique_32100070__image_wgx_zsr_qtb2" src="image/serial_interface_qspi_nrf7002.svg" /></div>
+</div>
+<p class="p">The following figure shows the connections when using SPI between <span class="keyword">nRF7002</span> and nRF5340.</p>
+<div class="fig fignone" id="unique_32100070__fig_yqz_bbc_3wb"><span class="figcap"><span class="fig--title-label">Figure 6. </span>SPI connection</span>
+<div class="imagecenter"><img alt="SPI interface connection" class="image" id="unique_32100070__image_orr_dbc_3wb" src="image/serial_interface_spi_nrf7002.svg" /></div>
+</div>
+</div>
+</div>
+<div aria-labelledby="ariaid-title9" class="topic concept nested2" id="pcb_layout_example">
+<h3 class="title topictitle3" id="ariaid-title9">PCB layout example</h3>
+<div class="body conbody"><p class="shortdesc">The <a href="../../glossary/glossary.html#pcb" shape="rect" title="A board that connects electronic components."><dfn class="term abbreviated-form">PCB</dfn></a> layout shown below is a reference layout for the
+QFN package.</p>
+<div class="fig fignone" id="pcb_layout_example__fig_cgz_gfd_cvb"><span class="figcap"><span class="fig--title-label">Figure 7. </span>Top silk layer</span>
+<div class="imagecenter"><img alt="Top silk layer" class="image" id="pcb_layout_example__image_dgz_gfd_cvb" src="image/nRF7002_top_silk.svg" width="288" /></div>
+</div>
+<div class="fig fignone" id="pcb_layout_example__fig_rjb_kfd_cvb"><span class="figcap"><span class="fig--title-label">Figure 8. </span>Top layer</span>
+<div class="imagecenter"><img alt="Top layer" class="image" id="pcb_layout_example__image_sjb_kfd_cvb" src="image/nRF7002_top_layer.svg" width="288" /></div>
+</div>
+<div class="fig fignone" id="pcb_layout_example__fig_m11_mfd_cvb"><span class="figcap"><span class="fig--title-label">Figure 9. </span>Mid layer 1</span>
+<div class="imagecenter"><img alt="Mid layer 1" class="image" id="pcb_layout_example__image_n11_mfd_cvb" src="image/nRF7002_mid_layer1.svg" width="288" /></div>
+</div>
+<div class="fig fignone" id="pcb_layout_example__fig_bwr_rfd_cvb"><span class="figcap"><span class="fig--title-label">Figure 10. </span>Mid layer 2</span>
+<div class="imagecenter"><img alt="Mid layer 2" class="image" id="pcb_layout_example__image_cwr_rfd_cvb" src="image/nRF7002_mid_layer2.svg" width="288" /></div>
+</div>
+<div class="fig fignone" id="pcb_layout_example__fig_jhv_sfd_cvb"><span class="figcap"><span class="fig--title-label">Figure 11. </span>Bottom layer</span>
+<div class="imagecenter"><img alt="Bottom layer" class="image" id="pcb_layout_example__image_khv_sfd_cvb" src="image/nRF7002_bottom_layer.svg" width="288" /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="topicfooter" id="thefooter">
+<script src="../../../../PRODUCT_PLUGIN/footer.js" xml:space="preserve"><!-- --></script>
+<script xml:space="preserve">
+    document.getElementById("thefooter").innerHTML = getFooter("2023-02-08");
+    document.getElementById("theURL").href = getURL();
+    document.getElementById("theURL").onclick = promptCopy;
+
+$(".childlinks a[href*='.pdf'],.childlinks a[href*='.PDF']").attr("target","_blank");
+
+$("a[href^='../..https://']")
+   .each(function()
+   {
+      this.href = this.href.replace(/^.+https:\/\//i, "https://");
+   });
+</script>
+<noscript>
+<hr/>
+<a href="mailto:docfeedback@nordicsemi.no?subject=Documentation%20feedback" id="maillink" shape="rect">Documentation feedback</a> | <a href="https://devzone.nordicsemi.com/questions/" shape="rect" target="_blank">Developer Zone</a> | <a href="http://response.nordicsemi.com/subscribe-to-our-newsletters" shape="rect" target="_blank">Subscribe</a> | Updated 2023-02-08
+</noscript>
+</div><script>(function(){var js = "window['__CF$cv$params']={r:'7d42b0574b840705',m:'QACYjx9jTrscHz_gRPsneadg49XHeLMWYzpJr42n780-1686243603-0-AUyC8MKP3dyQ+TGtBbX5G4dRJV1jGs7LPHxNW4Cr79NA'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>
