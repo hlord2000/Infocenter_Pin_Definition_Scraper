@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 links = { 
     "nRF9160" : "https://infocenter.nordicsemi.com/topic/ps_nrf9160/pin.html",
     "nRF7002" : "https://infocenter.nordicsemi.com/topic/ps_nrf7002/chapters/hw_layout/doc/hw_layout.html",
+    "nRF7001" : "https://infocenter.nordicsemi.com/topic/ps_nrf7001/chapters/hw_layout/doc/hw_layout.html",
     "nRF5340" : "https://infocenter.nordicsemi.com/topic/ps_nrf5340/chapters/pin.html?cp=4_0_0_8_0",
     "nRF52840" : "https://infocenter.nordicsemi.com/topic/ps_nrf52840/pin.html",
     "nRF52833" : "https://infocenter.nordicsemi.com/topic/ps_nrf52833/pin.html",
@@ -24,6 +25,7 @@ links = {
 footprints = {
     "nRF9160" : ["LGA",],
     "nRF7002" : ["QFN48",],
+    "nRF7001" : ["QFN48",],
     "nRF5340" : ["aQFN94", "WLCSP",],
     "nRF52840" : ["aQFN73", "QFN48", "WLCSP",],
     "nRF52833" : ["aQFN73", "QFN40", "WLCSP",],
